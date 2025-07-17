@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/calculator.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+          /* background-color:rgba(98, 98, 139, 0.756); */
+          background-image: url(pexels-padrinan-194096.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          object-fit: cover;
+          background-size: cover;
+            
+        }
+        h1{
+            font-size: 60px;
+            font-weight: bolder;
+            color:wheat;
+            font-family:'Courier New', Courier, monospace;
+            border: 2px bold rgb(160, 46, 118);
+            width: 300px;
+            text-align: center;
+            margin-left: 470px;
+        }
+        input{
+            height: 30px;
+            width: 57px;
+            border-radius: 6px;
+            
+        }
+        .text{
+           height: 40px;
+           width: 285px;
+           background-color:rgba(255, 255, 255, 0.189);
+           color: white;
+           border:none;
+           /* border-radius: 7px; */
+           font-size: 20px;
+           font-weight: bold;
+           padding: 10px;
+           
+        }
+        .btn{
+            background-color: wheat;
+            border: 1px bold transparent;
+            border-radius: 7px;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 20px;
+            height: 50px;
+            border: none;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .btn:hover{
+        background-color:rgb(150, 191, 207) ;
+        color: wheat;
+        cursor: pointer;
+        }
+        form{
+            display: inline-block;
+             margin-left: 500px;
+            height: 400px;
+            background-color:rgb(255,255,255,.1);
+            border-radius: 6px;
+            backdrop-filter: blur(30px);
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="http://127.0.0.1:5500/calculator.html" name="clc">
+        <input class="text" name="display"> <br>
+        <input class="btn" type="button" value="0" onclick="clc.display.value += &#39;0&#39;">
+        <input class="btn" type="button" value="1" onclick="clc.display.value += &#39;1&#39;">
+        <input class="btn" type="button" value="2" onclick="clc.display.value += &#39;2&#39;">
+        <input class="btn" type="button" value="+" onclick="clc.display.value += &#39;+&#39; " style="background-color: orangered;"> <br>
+        <input class="btn" type="button" value="3" onclick="clc.display.value += &#39;3&#39; ">
+        <input class="btn" type="button" value="4" onclick="clc.display.value += &#39;4&#39; "> 
+        <input class="btn" type="button" value="5" onclick="clc.display.value += &#39;5&#39;">
+        <input class="btn" type="button" value="-" onclick="clc.display.value += &#39;-&#39;" style="background-color: blue;"> <br>
+        <input class="btn" type="button" value="6" onclick="clc.display.value += &#39;6&#39;">
+        <input class="btn" type="button" value="7" onclick="clc.display.value += &#39;7&#39;">
+        <input class="btn" type="button" value="8" onclick="clc.display.value += &#39;8&#39; ">
+        <input class="btn" type="button" value="*" onclick="clc.display.value += &#39;*&#39;" style="background-color: aqua;"> <br> 
+        <input class="btn" type="button" value="9" onclick="clc.display.value += &#39;9&#39;">
+        <input class="btn" type="button" value="C" onclick="clc.display.value =&#39;&#39;" style="background-color: brown;">
+        <input class="btn" type="button" value="=" onclick="clc.display.value =eval(clc.display.value)">
+        <input class="btn" type="button" value="÷" onclick="clc.display.value += &#39;/&#39;" style="background-color: blueviolet;">
+
+    </form>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
